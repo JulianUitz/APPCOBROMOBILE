@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Mi App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.lightBlue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       routes: {
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         '/registro': (context) => RegistroWidget(),
         '/inicio_carrito': (context) => InicioCarritoWidget(),
         '/pago_type': (context) => PagoTypeWidget(),
-        '/product_detail': (context) => ProductDetailsWidget()
+        '/product_details': (context) => ProductDetailsWidget()
       },
       initialRoute: '/', // Ruta inicial
 

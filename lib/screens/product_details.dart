@@ -126,7 +126,7 @@ class _ProductDetailsWidgetState extends State<ProductDetailsWidget> {
                 ),
               ),
               const Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 190, 0, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(0, 250, 0, 0),
                 child: NavBarWithMiddleButtonWidget(), // Replace with your widget
               ),
             ],

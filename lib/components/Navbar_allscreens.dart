@@ -3,7 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 import '../model/nav_bar_with_middle_button_model.dart';
 export '../model/nav_bar_with_middle_button_model.dart';
 
-
 class NavBarWithMiddleButtonWidget extends StatefulWidget {
   const NavBarWithMiddleButtonWidget({Key? key}) : super(key: key);
 
@@ -38,7 +37,7 @@ class _NavBarWithMiddleButtonWidgetState
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 90,
+      height: 80,
       decoration: const BoxDecoration(
         color: Color(0x00EEEEEE),
       ),
@@ -91,22 +90,13 @@ class _NavBarWithMiddleButtonWidgetState
             children: [
               IconButton(
                 icon: const Icon(
-                  Icons.home_rounded,
-                  color: Color(0xFF9299A1),
-                  size: 24,
-                ),
-                onPressed: () {
-                  print('IconButton pressed ...');
-                },
-              ),
-              IconButton(
-                icon: const Icon(
                   Icons.chat_bubble_rounded,
                   color: Color(0xFF9299A1),
                   size: 24,
                 ),
                 onPressed: () {
-                  print('IconButton pressed ...');
+                  Navigator.pushReplacementNamed(
+                    context, '/product_details');
                 },
               ),
               Column(
@@ -122,7 +112,8 @@ class _NavBarWithMiddleButtonWidgetState
                         size: 30,
                       ),
                       onPressed: () {
-                        print('MiddleButton pressed ...');
+                        Navigator.pushReplacementNamed(
+                            context, '/inicio_carrito');
                       },
                     ),
                   ),
@@ -135,17 +126,7 @@ class _NavBarWithMiddleButtonWidgetState
                   size: 24,
                 ),
                 onPressed: () {
-                  print('IconButton pressed ...');
-                },
-              ),
-              IconButton(
-                icon: const Icon(
-                  Icons.settings,
-                  color: Color(0xFF9299A1),
-                  size: 24,
-                ),
-                onPressed: () {
-                  print('IconButton pressed ...');
+                  Navigator.pushNamed(context, '/inicio_carrito');
                 },
               ),
             ],
@@ -154,14 +135,15 @@ class _NavBarWithMiddleButtonWidgetState
       ),
     );
   }
-  
-  NavBarWithMiddleButtonModel createModel(BuildContext context, NavBarWithMiddleButtonModel Function() param1) {
+
+  NavBarWithMiddleButtonModel createModel(
+      BuildContext context, NavBarWithMiddleButtonModel Function() param1) {
     return NavBarWithMiddleButtonModel();
   }
 }
 
 class NavBarWithMiddleButtonModel {
   void onUpdate() {}
-  
+
   void maybeDispose() {}
 }

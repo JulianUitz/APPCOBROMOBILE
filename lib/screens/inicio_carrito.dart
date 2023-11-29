@@ -10,6 +10,17 @@ class InicioCarritoWidget extends StatefulWidget {
   _InicioCarritoWidgetState createState() => _InicioCarritoWidgetState();
 }
 
+Widget _buildBarcodeReader() {
+  return BarcodeWidget(
+    barcode: Barcode.code93(),
+    width: 300,
+    height: 200,
+    color: Colors.black,
+    data: 'CODE93',
+    backgroundColor: Colors.white,
+  );
+}
+
 class _InicioCarritoWidgetState extends State<InicioCarritoWidget> {
   @override
   Widget build(BuildContext context) {
@@ -60,20 +71,9 @@ class _InicioCarritoWidgetState extends State<InicioCarritoWidget> {
                   Align(
                     alignment: const AlignmentDirectional(0.00, 0.00),
                     child: Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(10, 10, 10, 0),
-                      child: BarcodeWidget(
-                        data: 'Barcode',
-                        barcode: Barcode.code128(),
-                        width: 300,
-                        height: 90,
-                        color: Colors.transparent,
-                        backgroundColor: Colors.transparent,
-                        errorBuilder: (_context, _error) => const SizedBox(
-                          width: 300,
-                          height: 90,
-                        ),
-                        drawText: true,
-                      ),
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(10, 10, 10, 0),
+                      child: _buildBarcodeReader(),
                     ),
                   ),
                 ],
