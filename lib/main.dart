@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Mi App',
+      title: 'ScanFast',
       theme: ThemeData(
         primarySwatch: Colors.lightBlue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
